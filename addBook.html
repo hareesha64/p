@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+       body {
+          background-color: wheat;
+          text-align: center;
+          font-size: 20px;
+          
+          border-style: solid;
+  box-sizing: border-box;
+        }
+  </style>
+  <script>
+    function validateForm()
+    {
+       
+        var id=document.myform.id.value;
+        var title= document.myform.title.value;
+
+        var author= document.myform.author.value;
+        var price= document.myform.price.value;
+        
+        var genre= document.myform.genre.value;
+        var date=document.myform.date.value;
+        
+        
+        if(id==""||title==""||author==""||price==""||genre==""||date=="")
+        {
+            alert("fields should not be empty");
+        }
+        else
+        {
+           alert("Book added successfully");
+          
+        }
+
+       
+    }
+
+
+
+</script>
+</head>
+<body>
+​
+<div class="container">
+  <h2>Add Book Form</h2>
+  <form  name="myform"  >
+    <div class="form-group">
+        <label for="id">Enter id *:</label>
+        <input type="number" class="form-control" id="id" placeholder="Enter id" name="id">
+      </div>
+
+    <div class="form-group">
+      <label for="title">Enter title *:</label>
+      <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="author">Enter author *:</label>
+      <input type="text" class="form-control" id="author" placeholder="Enter author name" name="author">
+    </div>
+    <div class="form-group">
+        <label for="price">Enter price *:</label>
+        <input type="price" class="form-control" id="price" placeholder="Enter price" name="price">
+      </div>
+   
+    <label for="genre">Choose Genre *:</label>
+
+    <select name="genre" id="genre">
+      <option value="Sci-fi">Sci-fi</option>
+      <option value="Mystery">Mystery</option>
+      <option value="thriller">Thriller</option>
+    </select></br>
+    <label for="start">Enter date *:</label>
+
+<input type="date" id="date" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2020-10-24"></br>
+
+    
+    <button onclick="validateForm()" >submit</button>
+  </form>
+</div>
+
+​
+</body>
+</html>
+​
